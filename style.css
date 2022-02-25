@@ -1,0 +1,102 @@
+
+@font-face {
+    font-family: "prueba";
+    src: url("./fontawesome/webfonts/fa-brands-400.ttf");
+}
+ 
+body{
+    margin: 0%;
+}
+.container {
+    background-color: #04B2D9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif
+}
+.header{
+    background-image: url("./image/netcode3.jpg");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title{
+    text-align: center;
+    color: white;
+    font-size:70px;
+    
+}
+.subtitle{
+    text-align: center;
+    color: rgb(119, 118, 118);
+    font-style: oblique;
+
+}
+.title-nav{
+    text-align: center;
+}
+
+.contenido{
+    background-color: #022873;
+    margin-top: 30px;
+    margin-bottom:10px ;
+    padding: 5px;
+}
+.skill-content{
+    background-color: #048ABF;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+}
+.php-icon{
+    color: darkblue;
+}
+.html-icon{
+    color: orangered;
+}
+.css-icon{
+    color:lightseagreen;
+}
+.js-icon{
+    color:orange;
+}
+.python-icon{
+    width: 65px;
+    height: 65px;
+}
+.react-icon{
+    color:aqua
+}
+.mysql-icon{
+    width: 63px;
+    height: 65px;
+}
+.bootstrap-icon{
+    color: purple
+}
+.english-icon{
+    color: darkslategrey
+}
+.footer{
+    background-color: #00040D;
+    padding: 25px;
+}
+.content-footer{
+    text-align: center;
+    color:white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
