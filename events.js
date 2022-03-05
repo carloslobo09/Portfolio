@@ -78,4 +78,71 @@ document.querySelectorAll('.grid .contenido .port-content .content-order-in-card
 overlay.addEventListener('click',(evento)=>{
     evento.target.id === 'overlay' ? overlay.classList.remove('activo') : '';
 });
+let nombre = "CARLOS"
+let segnombre = "IGNACIO"
+let apellido = "LOBO"
+let HTMLCard = ""
+let HTMLCard2 = ""
+let HTMLCard3 = ""
+let HTMLCard4 = `<h5 class="subtitle">"Hello World"<br><p style=font-size:20px>there are no limits to learning<p></h5>`
+let HTMLCard5 = `<h3 class="subtitle2">Tec.&nbsp;Analista en Sistemas<br>Desarrollador</h3>`
 
+    HTMLCard += `<p class="letra l1">${nombre}</p>`
+    $("#title").html(HTMLCard)
+    setTimeout(() => {
+        HTMLCard = `<p class="l1">${nombre}</p>`
+        HTMLCard2 += `<p class="letra l2">&nbsp;${segnombre}</p>`
+        $("#title").html(HTMLCard+HTMLCard2)
+        setTimeout(() =>{
+            HTMLCard = `<p class="l1">${nombre}</p>`
+            HTMLCard2 = `<p class="l2">&nbsp;${segnombre}</p>`
+            HTMLCard3 += `<p class="letra l3">&nbsp;${apellido}</p>`
+            $("#title").html(HTMLCard+HTMLCard2+HTMLCard3)
+            setTimeout(() => {
+                $("#subtitle").html(HTMLCard4)
+                setTimeout(() => {
+                    $("#subtitle2").html(HTMLCard5)
+                },1000)
+            },1000)
+        },700)
+    }, 700)
+    
+let refExpCea = document.getElementById("refExpCea");
+let refExpFarm = document.getElementById("refExpFarm");
+
+refExpCea.style.cursor = "pointer";
+refExpFarm.style.cursor = "pointer";
+
+
+refExpCea.addEventListener("click",function () {
+    let x = document.getElementById("port-content");
+    if (x.style.display === "flex") {
+        setTimeout(() =>{
+            location.href = "#cea";
+        },300)
+        null
+    } else {
+        x.style.display = "flex";
+        x.style.animation = "animationOpen 0.5s ease-in-out";
+        content1.classList.add("button-active");
+        setTimeout(() =>{
+            location.href = "#cea";
+        },300)
+    }
+})
+refExpFarm.addEventListener("click",function () {
+    let x = document.getElementById("port-content");
+    if (x.style.display === "flex") {
+        setTimeout(() =>{
+            location.href = "#farm";
+        },300)
+        null
+    } else {
+        x.style.display = "flex";
+        x.style.animation = "animationOpen 0.5s ease-in-out";
+        content1.classList.add("button-active");
+        setTimeout(() =>{
+            location.href = "#farm";
+        },300)
+    }
+})
