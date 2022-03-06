@@ -8,6 +8,36 @@ body{
     margin: 0%;
     overflow-x: hidden;
 }
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: 1s all;
+    opacity: 0;
+}
+.loading.show {
+    opacity: 1;
+}
+.loading .spin {
+    border: 3px solid hsla(185, 100%, 62%, 0.2);
+    border-top-color: #0008ff;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
  /* ------------- HEADER -----------------*/
 .container {
     display: flex;
@@ -39,6 +69,9 @@ body{
 }
 .letra {
     animation: letrasTitle 0.7s ease-in-out;
+}
+.letra2{
+    font-size:20px
 }
 .l2 {
     position: absolute;
@@ -116,6 +149,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 2px 2px 2px black, 3px 3px 3px rgba(255, 255, 255, 0.481), 0 0 3px gray;
     position: relative;
+    top: 20%;
     animation: letrasSubtitle2 1s ease-out;
 }
 @keyframes letrasSubtitle2{
@@ -440,13 +474,13 @@ body{
     border-radius: 4px;
 }
 .telegram-icon{
-    color: blue;
-    background-color: whitesmoke;
+    color: white;
+    background-color: rgb(40, 38, 44);
     padding: 5px;
     border-radius: 4px;
 }
 .mail-icon{
-    color:lightseagreen;
+    color:rgb(0, 100, 208);
     background-color: whitesmoke;
     padding: 5px;
     border-radius: 4px;
@@ -458,7 +492,7 @@ body{
     border-radius: 4px;
 }
 .icons-content:hover{
-    animation: icono 1s ease;
+    animation: icono 1s ease-out;
 }
 @keyframes icono{
     from{
@@ -496,11 +530,34 @@ body{
         font-size: 40px;
         left: 50%;
     }
+    .subtitle2{
+        top: 20%;
+    }
 
 }
 @media (max-width:550px) {
-    .title{font-size: 50px;}
-    .subtitle{font-size: 25px;}
+    .title{
+        font-size: 55px;
+        left: 1%;
+        top: -5%;
+    }
+    .subtitle{
+        font-size: 20px;
+        left: 10%;
+        top: 50%;
+    }
+    .subtitle2{
+        font-size: 20px;
+        left: -6%;
+        top: 20%;
+    }
+    .l1::first-letter,.l2::first-letter,.l3::first-letter{
+        font-size: 70px;
+        color: rgba(63, 124, 255, 0.481);
+    }
+    .letra2{
+        font-size:13px
+    }
     .contact-content{font-size: 13px;}
     .card-content{
         width: 70px;
@@ -516,7 +573,7 @@ body{
         height: 35px;
     }
     .content-footer{font-size: 10px;}
-    .card-port p{
+    .card-port p, .exp-card p{
         font-size: 10px;
         padding: 3%;
     }
@@ -529,5 +586,10 @@ body{
     .overlay img{
         width: 90%;
         max-width: 100%;
+    }
+    .exp-card{
+        width: 70%;
+        font-size: 10px;
+        margin: 1% 8% 1% 8%;
     }
 }

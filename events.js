@@ -84,8 +84,8 @@ let apellido = "LOBO"
 let HTMLCard = ""
 let HTMLCard2 = ""
 let HTMLCard3 = ""
-let HTMLCard4 = `<h5 class="subtitle">"Hello World"<br><p style=font-size:20px>there are no limits to learning<p></h5>`
-let HTMLCard5 = `<h3 class="subtitle2">Tec.&nbsp;Analista en Sistemas<br>Desarrollador</h3>`
+let HTMLCard4 = `<h5 class="subtitle">"Hello World"<br><p class="letra2">there are no limits to learning<p></h5>`
+let HTMLCard5 = `<h3 class="subtitle2">Tec.&nbsp;Analista en Sistemas</br>-</br>Desarrollador</h3>`
 
     HTMLCard += `<p class="letra l1">${nombre}</p>`
     $("#title").html(HTMLCard)
