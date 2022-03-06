@@ -35,7 +35,7 @@ var Loading = () => {
             // Borra el HTML
             setTimeout(() => {
                 loading.remove();
-            }, 2000);
+            }, 3000);
         }
 
     }

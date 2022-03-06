@@ -52,6 +52,7 @@ body{
     background-repeat: no-repeat;
     background-size:cover;
     height: 550px;
+    margin: 0%;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -166,6 +167,7 @@ body{
         transform: translate(-2% , 0px)rotate(-1deg);
     }
     100%{
+        width: 100%;
 
     }
 }
@@ -536,6 +538,7 @@ body{
 
 }
 @media (max-width:550px) {
+    
     .title{
         font-size: 55px;
         left: 1%;
@@ -543,20 +546,19 @@ body{
     }
     .subtitle{
         font-size: 20px;
-        left: 10%;
         top: 50%;
+        left: 15%;
     }
     .subtitle2{
         font-size: 20px;
-        left: -6%;
         top: 20%;
     }
     .l1::first-letter,.l2::first-letter,.l3::first-letter{
-        font-size: 70px;
+        font-size: 85px;
         color: rgba(63, 124, 255, 0.481);
     }
     .letra2{
-        font-size:13px
+        font-size:12px
     }
     .contact-content{font-size: 13px;}
     .card-content{
