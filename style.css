@@ -546,15 +546,20 @@ body{
     }
     .subtitle{
         font-size: 20px;
-        top: 50%;
-        left: 15%;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-items: center;
+        align-content:center;
+        left: 0%;
+        top: 30px;
     }
     .subtitle2{
         font-size: 20px;
         top: 20%;
     }
     .l1::first-letter,.l2::first-letter,.l3::first-letter{
-        font-size: 85px;
+        font-size: 90px;
         color: rgba(63, 124, 255, 0.481);
     }
     .letra2{
