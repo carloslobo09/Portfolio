@@ -67,11 +67,11 @@ document.querySelectorAll('.grid .contenido .port-content .content-order-in-card
     const ruta = elemento.getAttribute('src');
         elemento.addEventListener('click', ()=>{
             overlay.classList.add('activo');
-            if (ruta == "/image/JothtiDesign.jpg") {document.querySelector('#overlay img').src="/image/React-App.gif"}  
-            if (ruta == "/image/FarmaciaMorillo.jpg") {document.querySelector('#overlay img').src="/image/FARMACIA-HOSPITAL-MORILLO.gif"}  
-            if (ruta == "/image/CEA.jpg") {document.querySelector('#overlay img').src="/image/CEA.gif"}  
-            if (ruta == "/image/COVIDMorillo.jpg") {document.querySelector('#overlay img').src="/image/CDTM.gif"}  
-            if (ruta == "/image/SupOkami.jpg") {document.querySelector('#overlay img').src="/image/Sup Okami.gif"}    
+            if (ruta == "./image/JothtiDesign.jpg") {document.querySelector('#overlay img').src="./image/React-App.gif"}  
+            if (ruta == "./image/FarmaciaMorillo.jpg") {document.querySelector('#overlay img').src="./image/FARMACIA-HOSPITAL-MORILLO.gif"}  
+            if (ruta == "./image/CEA.jpg") {document.querySelector('#overlay img').src="./image/CEA.gif"}  
+            if (ruta == "./image/COVIDMorillo.jpg") {document.querySelector('#overlay img').src="./image/CDTM.gif"}  
+            if (ruta == "./image/SupOkami.jpg") {document.querySelector('#overlay img').src="./image/Sup Okami.gif"}    
         });
     
 });
