@@ -1,10 +1,12 @@
-var Loading = () => {
+var Loading = (loadingDelayHidden) => {
 
     //-----------------------------------------------------
     // Variables
     //-----------------------------------------------------
     // HTML
     let loading = null;
+    // Retardo para borrar
+    let myLoadingDelayHidden = loadingDelayHidden;
     // Imágenes
     let imgs = [];
     let lenImgs = 0;
@@ -30,12 +32,11 @@ var Loading = () => {
         // Comprueba que exista el HTML
         if(loading !== null) {
             // Oculta el HTML de "cargando..." quitando la clase .show
-            loading.classList.remove('show');
-
             // Borra el HTML
-            setTimeout(() => {
+            setTimeout(function () {
                 loading.remove();
-            }, 3000);
+                loading.classList.remove('show');
+            }, myLoadingDelayHidden);
         }
 
     }
@@ -47,14 +48,27 @@ var Loading = () => {
         /* Comprobar que el HTML esté cargadas */
         document.addEventListener('DOMContentLoaded', function () {
             loading = document.querySelector('.loading');
-            hideLoading();
+            imgs = Array.from(document.images);
+            lenImgs = imgs.length;
+
+            /* Comprobar que todas las imágenes estén cargadas */
+            if(imgs.length === 0) {
+                // No hay ninguna
+                hideLoading();
+            } else {
+                // Una o más
+                imgs.forEach(function (img) {
+                    // A cada una le añade un evento que cuando se carge la imagen llame a la funcion incrementCounterImgs
+                    img.addEventListener('onload', incrementCounterImgs(), false);
+                });
+            }
         });
     }
+
     return {
         'init': init
-    }     
-
+    }
 }
 
 // Para usarlo se declara e inicia. El número es el tiempo transcurrido para borra el HTML una vez cargado todos los elementos, en este caso 1 segundo: 1000 milisegundos,
-Loading().init();
+Loading(1500).init();

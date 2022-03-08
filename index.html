@@ -6,18 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="./fontawesome/css/all.css" rel="stylesheet">
-    <script defer src="js/loading.js"></script>
     <script defer src="events.js"></script>
-    <script defer src="js/particles.js"></script>
+    <script src="js/particles.js"></script>
     <script defer src="js/particulas.js"></script>
     <title>Portafolio</title>
 </head>
 
-<body id="body">
+<body>
     <div class="loading show">
         <div class="spin"></div>
     </div>
-    <div class="container">
+    <div class="container" id="container">
         <header class="header">
             <div id="particles-js"></div>
             <div class="grid2">
@@ -35,7 +34,7 @@
                     <div class="content-order-in-card">
                         <div class="card-port">
                             <h3 class="title-port">Jothti Design</h3>
-                            <img class="img-port" id="react-app" src="/image/JothtiDesign.jpg"></br>
+                            <img class="img-port" id="react-app" src="./image/JothtiDesign.jpg"></br>
                             <p><strong>Mi primer aplicación creada con la tecnología de React, a modo de
                                     proyecto final en el curso, impartido por CoderHouse</strong>
                                 Esta tienda se creo con el fin de comercializar prendas y otros accesorios
@@ -58,7 +57,7 @@
                     <div class="content-order-in-card">
                         <div class="card-port">
                             <h3 class="title-port" id="farm">Farmacia / Hospital Morillo</h3>
-                            <img class="img-port" src="/image/FarmaciaMorillo.jpg">
+                            <img class="img-port" src="./image/FarmaciaMorillo.jpg">
                             <p><strong>Aplicacion para Control de Stock. </strong> Este proyecto fue desarrollado con el
                                 fin de llevar
                                 un control exacto de insumos en farmacia del hospital de Morillo, instalado en un
@@ -79,7 +78,7 @@
                     <div class="content-order-in-card">
                         <div class="card-port">
                             <h3 class="title-port" id="cea">Instituto C.E.A.</h3>
-                            <img class="img-port" src="/image/CEA.jpg">
+                            <img class="img-port" src="./image/CEA.jpg">
                             <p><strong>Aplicacion para el Control de alumnos, profesores, cursos y aranceles.</strong>
                                 Aplicativo local orientado en el control exacto de profesores, cursos a impartir,
                                 alumnos y
@@ -108,7 +107,7 @@
                     <div class="content-order-in-card">
                         <div class="card-port">
                             <h3 class="title-port">Control de transeuntes / Coronel Juan Solá</h3>
-                            <img class="img-port" src="/image/COVIDMorillo.jpg">
+                            <img class="img-port" src="./image/COVIDMorillo.jpg">
                             <p><strong>Aplicacion para el Control de transito municipal.</strong>
                                 A modo de colaboracion, este proyecto fue desarrollado con el fin de llevar un control
                                 total del ingreso
@@ -129,7 +128,7 @@
                     <div class="content-order-in-card">
                         <div class="card-port">
                             <h3 class="title-port">Supermercado Ōkami</h3>
-                            <img class="img-port" src="/image/SupOkami.jpg">
+                            <img class="img-port" src="./image/SupOkami.jpg">
                             <p><strong>Ecommerce.</strong>
                                 Mi primer aplicación creada con JavaScript, Este eCommerce fue creado imaginando un
                                 supermercado
@@ -201,6 +200,19 @@
                 <div class="exp-content" id="exp-content">
 
                     <div class="exp-card">
+                        <div class="exp-card">
+                            <h3 class="title-port">Desarrollador</h3>
+                            <img class="img-exp" src="./image/farmacia.jpg"></br>
+                            <strong>Farmacia | Hospital Morillo | 2020</strong>
+                            </br></br>
+                            <div class="line"></div></br>
+                            <p>
+                                Desarrollando un aplicativo web, enfocado en el control exhaustivo de insumos farmaceuticos,
+                                automatizando calculos
+                                de insumos necesarios mensualmente de acuerdo al criterio profesional.
+                                </br></br>
+                                <strong><a id="refExpFarm">¡Ver mas sobre el proyecto!</a></strong>
+                        </div>
                         <h3 class="title-port">Secretario Administrativo Informático</h3>
                         <img class="img-exp" src="./image/Legislatura.jpg"></br>
                         <strong style="text-align: center;">Legislatura de la Provincia de Salta | 2020-2021</strong>
@@ -234,19 +246,7 @@
                             </br></br>
                             <strong><a id="refExpCea">¡Ver mas sobre el proyecto!</a></strong>
                     </div>
-                    <div class="exp-card">
-                        <h3 class="title-port">Desarrollador</h3>
-                        <img class="img-exp" src="./image/farmacia.jpg"></br>
-                        <strong>Farmacia | Hospital Morillo | 2020</strong>
-                        </br></br>
-                        <div class="line"></div></br>
-                        <p>
-                            Desarrollando un aplicativo web, enfocado en el control exhaustivo de insumos farmaceuticos,
-                            automatizando calculos
-                            de insumos necesarios mensualmente de acuerdo al criterio profesional.
-                            </br></br>
-                            <strong><a id="refExpFarm">¡Ver mas sobre el proyecto!</a></strong>
-                    </div>
+                    
                     <div class="exp-card">
                         <h3 class="title-port">Diseñador Grafico</h3>
                         <img class="img-exp" src="./image/corel.jpg"></br>
@@ -295,5 +295,6 @@
         </footer>
     </div>
 </body>
-<script src="/js/jquery.js"></script>
+<script src="./js/jquery.js"></script>
+<script src="./js/loading.js"></script>
 </html>
