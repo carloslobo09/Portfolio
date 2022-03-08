@@ -108,7 +108,7 @@ body{
     position: absolute;
     font-family:'Courier New', Courier, monospace;
     top: 25%;
-    left: 55%;
+    left: 50%;
     text-align: center;
     animation: letrasSubtitle 0.6s linear;
 
@@ -537,7 +537,7 @@ body{
     }
 
 }
-@media (max-width:550px) {
+@media (max-width:650px) {
     
     .title{
         font-size: 55px;
@@ -547,7 +547,9 @@ body{
     .subtitle{
         font-size: 20px;
         top: 50%;
-        left: 25%;
+        left: 50%;
+        margin-left: -50%;
+        width: 100%;
     }
     .subtitle2{
         font-size: 20px;
