@@ -85,7 +85,7 @@ let HTMLCard = ""
 let HTMLCard2 = ""
 let HTMLCard3 = ""
 let HTMLCard4 = `<h5 class="subtitle">"Hello World"<br><p class="letra2">there are no limits to learning<p></h5>`
-let HTMLCard5 = `<h3 class="subtitle2">Tec.&nbsp;Analista en Sistemas</br>-</br>Desarrollador</h3>`
+let HTMLCard5 = `<h3 class="subtitle2">Analista en Sistemas</br>-</br>Desarrollador</h3>`
     setTimeout(() => {
         HTMLCard += `<p class="letra l1">${nombre}</p>`
         $("#title").html(HTMLCard)
@@ -102,6 +102,9 @@ let HTMLCard5 = `<h3 class="subtitle2">Tec.&nbsp;Analista en Sistemas</br>-</br>
                     $("#subtitle").html(HTMLCard4)
                     setTimeout(() => {
                         $("#subtitle2").html(HTMLCard5)
+                        setTimeout(() => {
+                            document.getElementById("burbuja").style.display ="block"
+                        }, 1000);
                     },1000)
                 },1000)
             },700)
@@ -147,4 +150,13 @@ refExpFarm.addEventListener("click",function () {
             location.href = "#farm";
         },300)
     }
+})
+let burbujaP = document.getElementById("burbuja-p");
+burbujaP.textContent = "¡Más sobre mí!";
+document.querySelector("#burbuja").addEventListener("mouseover",function () {
+    burbujaP.textContent = "";
+    
+})
+burbuja.addEventListener("mouseout",function () {
+    burbujaP.textContent = "¡Más sobre mí!";
 })

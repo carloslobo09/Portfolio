@@ -3,7 +3,10 @@
     font-family: "prueba";
     src: url("./fontawesome/webfonts/fa-brands-400.ttf");
 }
- 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0%;
     overflow-x: hidden;
@@ -65,7 +68,7 @@ body{
     font-size:80px;
     text-shadow: 4px 5px 6px black;
     position: absolute;
-    left: 20%;
+    left: 18%;
     top: -5%;
 }
 .letra {
@@ -73,6 +76,10 @@ body{
 }
 .letra2{
     font-size:20px
+}
+.l1,.l2,.l3{
+    letter-spacing: 4px;
+
 }
 .l2 {
     position: absolute;
@@ -84,7 +91,7 @@ body{
 }
 .l1::first-letter,.l2::first-letter,.l3::first-letter{
     font-size: 120px;
-    color: rgba(63, 124, 255, 0.481);
+    color: rgba(0, 81, 255, 0.802);
 }
 
 @keyframes letrasTitle{
@@ -108,7 +115,7 @@ body{
     position: absolute;
     font-family:'Courier New', Courier, monospace;
     top: 25%;
-    left: 50%;
+    left: 55%;
     text-align: center;
     animation: letrasSubtitle 0.6s linear;
 
@@ -218,6 +225,8 @@ body{
     background-color: #1b2f55;
     display: none;
     flex-direction: column;
+    scroll-behavior: smooth;
+    position:static;
 }
 .content-order-in-card{
     display: flex;
@@ -289,7 +298,6 @@ body{
 .contenedor-img{
     position: relative;
     display: flex;
-    
     justify-content: center;
     animation: gifContent 1s ease-in;
 }
@@ -358,6 +366,7 @@ body{
 @keyframes animationOpen{
     0%{
         clip-path: inset(0 0 100% 0);
+        
     }  
     100%{
        
@@ -504,6 +513,58 @@ body{
         transform: rotate3d(0,1,0,360deg);
     }
 }
+ /* ------------- BURBUJA -----------------*/
+.burbuja{
+    width: 150px;
+    height: 150px;
+    position:fixed;
+    display: none;
+    top: 30%;
+    left: 0;
+    border-radius:50%;
+    background-color: #254682 ;
+    box-shadow: 5px 5px 5px 5px black;
+    cursor: pointer;
+    animation: burbujaAnimacion 0.5s ease-out;
+    z-index: 1;
+
+}
+.burbuja:hover {
+    background-image: url('./image/yo.jpg');
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 1s;
+    transform: scale(1.1);    
+}
+
+
+.burbuja p {
+    text-align:center;
+    font-size: 23px;
+    font-family:'Courier New', Courier, monospace;
+    padding: 20% 0% 20% 0%;
+    color: whitesmoke;
+}
+
+
+@keyframes burbujaAnimacion{
+    0%{
+        transform: translateX(-70%);
+    }
+    50%{
+        transform: translateX(20%);
+    }
+    75%{
+        transform: translateX(-10%);
+    }
+    85%{
+        transform: translateX(5%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
 
  /* ------------- FOOTER -----------------*/
 
@@ -530,7 +591,7 @@ body{
     .title{font-size: 70px;}
     .subtitle{
         font-size: 40px;
-        left: 50%;
+        left: 53%;
     }
     .subtitle2{
         top: 20%;
@@ -557,15 +618,14 @@ body{
     }
     .l1::first-letter,.l2::first-letter,.l3::first-letter{
         font-size: 90px;
-        color: rgba(63, 124, 255, 0.481);
     }
     .letra2{
         font-size:12px
     }
     .contact-content{font-size: 13px;}
     .card-content{
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
         font-size: 10px;
         margin: 1% 8% 1% 8%;
         display: flex;
@@ -596,4 +656,17 @@ body{
         font-size: 10px;
         margin: 1% 8% 1% 8%;
     }
+    .burbuja{
+        width: 70px;
+        height: 70px;
+        top: 50%;
+    }
+    .burbuja p {
+        font-size: 13px;
+        padding: 5% 0% 5% 0%;
+    }
+    .burbuja:hover {
+        transform: scale(1.5);    
+    }
+    
 }
