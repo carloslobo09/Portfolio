@@ -179,7 +179,7 @@ body{
     }
 }
 
-.title-nav{
+.title-nav , .button-modal{
     text-align: center;
     padding: 10px;
     font-family: "Poppins", sans-serif;
@@ -187,13 +187,13 @@ body{
     letter-spacing: 7px;
     text-transform: uppercase;
 }
-.button{
+.button , .button-modal, .verDesktop, .volverDesktop{
     width: 100%;
     border: none;
     background-color: #0f1d3a;
     color:whitesmoke;
 }
-.button:hover{
+.button:hover , .button-modal:hover, .verDesktop:hover, .volverDesktop{
     background-color: #1b2f55;
     transition:background-color 1s 0s linear;
     cursor: pointer;
@@ -566,6 +566,126 @@ body{
     }
 }
 
+ /* ------------- MODAL -----------------*/
+ .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0%;
+    top: 0%;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.782); 
+  }
+  
+  .modal_content{
+    display: flex;
+    position: relative;
+    color: white;
+    top: 0%;
+    height: 95%;
+    flex-direction: column;
+    background-image: url("./image/desktop2-compressed.jpg");
+    background-size: 100%;
+    background-position: 10% 80%;
+    background-repeat: no-repeat;
+    margin: 1% 20% 1% 20%; 
+    border: 1px solid #888;
+    width: 60vw; 
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    overflow: visible;
+    align-content: center;
+    justify-content: center;
+
+  }
+
+  .content_modal{
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.727);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    animation: zIndexComprobando 2s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+    @keyframes zIndexComprobando{
+        from{opacity: 0;;}
+        to{opacity: 3;;}
+    }
+  .content_modal h1{
+    text-align: center;
+    font-size: 5vh;
+    font-family:'Courier New', Courier, monospace;
+  }
+  .content_modal p{
+      text-align:center;
+      font-size: 2.6vh;
+      font-family:'Courier New', Courier, monospace;
+      margin: 0% 5% 0% 5%; 
+    }
+  
+  .close {
+    color: #aaa;
+    position: absolute;
+    top: 2%;
+    left: 95%;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .button-modal{
+    height: 15%;
+    width: 100%;
+    top: 85%;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+  .verDesktop{
+    width: 20%;
+    height: 8vh;
+    font-family: "Poppins", sans-serif;
+    border-radius: 2vh 2vw;
+  }
+  .volverDesktop{
+    width: 10%;
+    height: 8vh;
+    font-family: "Poppins", sans-serif;
+    margin: 2%;
+    position: relative;
+    border-radius: 2vh 2vw;
+    display: none;
+  }
+  /* .pantalla-monitor{
+    border-radius: 15% 20% 2% 2%;
+    box-shadow: inset 0 0 5px blue, 00 10px blue;
+    height: 36%;
+    width: 26.7%;
+    position: absolute;
+    top: 40.7%;
+    left: .4%;
+    background-image: url("./image/desktop2.jpg");
+    background-size: 390%;
+    background-position: 1.4% 46.8%;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 12%, 100% 18%, 100% 85%, 0 100%);
+  }
+  .pantalla-monitor:hover{
+    background-color: rgba(0, 4, 130, 0.405);
+    background-image: url();
+  } */
  /* ------------- FOOTER -----------------*/
 
 .footer{
@@ -657,18 +777,53 @@ body{
         margin: 1% 8% 1% 8%;
     }
     .burbuja{
-        width: 70px;
-        height: 70px;
+        width: 75px;
+        height: 75px;
         top: 50%;
         box-shadow: 2px 2px 2px 2px black;
     }
     .burbuja p {
-        font-size: 13px;
-        padding: 5% 0% 5% 0%;
+        font-size: 14px;
+        padding: 3% 0% 3% 0%;
 
     }
     .burbuja:hover {
         transform: scale(1.5);    
     }
+    .modal_content{
+        width: 80%;
+    }
+    .content_modal p{
+        text-align:center;
+        font-size: 1.5vh;
+        font-family:'Courier New', Courier, monospace;
+        margin: 0% 5% 0% 5%; 
+      }
+      .content_modal h1{
+        text-align:center;
+        font-size: 2.5vh;
+        font-family:'Courier New', Courier, monospace;
+        margin: 2% 5% 2% 5%; 
+      }
     
+      .modal {
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;  
+      }
+      .verDesktop,.volverDesktop{
+          font-size: 20%;
+          height: 5%;
+      }
+      .button-modal{
+          font-size: 50%;
+          height: 10%;
+      }
+      .modal_content{
+          height: 60%;
+          width: 95%;
+      }
+      .close{
+          font-size: 15px;
+      }
 }

@@ -160,3 +160,41 @@ document.querySelector("#burbuja").addEventListener("mouseover",function () {
 burbuja.addEventListener("mouseout",function () {
     burbujaP.textContent = "¡Más sobre mí!";
 })
+
+let modal = document.getElementById("modal");
+burbuja.addEventListener("click",function () {
+    modal.style.display = "flex";
+    document.getElementById("body").style.overflowY = "hidden"
+    document.getElementById("container").style.filter = "blur(4px)"
+})
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function () {
+    modal.style.display = "none";
+    document.getElementById("container").style.filter = ""
+    document.getElementById("body").style.overflowY = "auto"
+    document.getElementById("content_modal").style.zIndex="1"
+    document.getElementById("button-modal").style.display="block"
+    document.getElementById("volverDesktop").style.display="none"
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      document.getElementById("container").style.filter = ""
+      document.getElementById("body").style.overflowY = "auto"
+      document.getElementById("content_modal").style.zIndex="1"
+      document.getElementById("button-modal").style.display="block"
+      document.getElementById("volverDesktop").style.display="none"
+    }
+}
+let btnverDesktop = document.getElementById("verDesktop");
+btnverDesktop.addEventListener("click",function () {
+    document.getElementById("content_modal").style.zIndex="-1"
+    document.getElementById("button-modal").style.display="none"
+    document.getElementById("volverDesktop").style.display="block"
+    document.getElementById("volverDesktop").addEventListener("click",function () {
+        document.getElementById("content_modal").style.zIndex="1"
+        document.getElementById("button-modal").style.display="block"
+        document.getElementById("volverDesktop").style.display="none"
+    })
+        
+})
