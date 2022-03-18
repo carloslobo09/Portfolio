@@ -623,7 +623,7 @@ body{
   }
   .content_modal p{
       text-align:center;
-      font-size: 2.8vh;
+      font-size: 2.6vh;
       font-family:'Courier New', Courier, monospace;
       margin: 0% 5% 0% 5%; 
     }
@@ -668,24 +668,7 @@ body{
     border-radius: 2vh 2vw;
     display: none;
   }
-  /* .pantalla-monitor{
-    border-radius: 15% 20% 2% 2%;
-    box-shadow: inset 0 0 5px blue, 00 10px blue;
-    height: 36%;
-    width: 26.7%;
-    position: absolute;
-    top: 40.7%;
-    left: .4%;
-    background-image: url("./image/desktop2.jpg");
-    background-size: 390%;
-    background-position: 1.4% 46.8%;
-    background-repeat: no-repeat;
-    clip-path: polygon(0 12%, 100% 18%, 100% 85%, 0 100%);
-  }
-  .pantalla-monitor:hover{
-    background-color: rgba(0, 4, 130, 0.405);
-    background-image: url();
-  } */
+
  /* ------------- FOOTER -----------------*/
 
 .footer{
