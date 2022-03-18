@@ -623,7 +623,7 @@ body{
   }
   .content_modal p{
       text-align:center;
-      font-size: 2.6vh;
+      font-size: 2.8vh;
       font-family:'Courier New', Courier, monospace;
       margin: 0% 5% 0% 5%; 
     }
@@ -691,6 +691,10 @@ body{
 .footer{
     background-color: #00040D;
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .content-footer{
     text-align: center;
@@ -703,6 +707,10 @@ body{
 	height:100%;
 	position:absolute;
 	background:rgba(14, 7, 38, 0.597);
+}
+#qrcode img{
+    width: 15vw;
+    padding-top: 2vw;
 }
 
  /* ------------- RESPONSIVE -----------------*/
@@ -791,7 +799,7 @@ body{
         transform: scale(1.5);    
     }
     .modal_content{
-        width: 80%;
+        width: 90%;
     }
     .content_modal p{
         text-align:center;
@@ -812,11 +820,12 @@ body{
         justify-content: center;  
       }
       .verDesktop,.volverDesktop{
-          font-size: 20%;
-          height: 5%;
+          font-size: 3vw;
+          height: 5vh;
+          width: 25vw;
       }
       .button-modal{
-          font-size: 50%;
+          font-size: 3vw;
           height: 10%;
       }
       .modal_content{
