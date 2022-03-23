@@ -67,7 +67,7 @@ document.querySelectorAll('.grid .contenido .port-content .content-order-in-card
     const ruta = elemento.getAttribute('src');
         elemento.addEventListener('click', ()=>{
             overlay.classList.add('activo');
-            if (ruta == "./image/JothtiDesign.jpg") {document.querySelector('#overlay img').src="./image/React-App.gif"}  
+            if (ruta == "./image/JothtiDesign.jpg") {document.querySelector('#overlay img').src="./image/React-App.gif"; }  
             if (ruta == "./image/FarmaciaMorillo.jpg") {document.querySelector('#overlay img').src="./image/FARMACIA-HOSPITAL-MORILLO.gif"}  
             if (ruta == "./image/CEA.jpg") {document.querySelector('#overlay img').src="./image/CEA.gif"}  
             if (ruta == "./image/COVIDMorillo.jpg") {document.querySelector('#overlay img').src="./image/CDTM.gif"}  
@@ -195,6 +195,5 @@ btnverDesktop.addEventListener("click",function () {
         document.getElementById("content_modal").style.zIndex="1"
         document.getElementById("button-modal").style.display="block"
         document.getElementById("volverDesktop").style.display="none"
-    })
-        
+    })      
 })
