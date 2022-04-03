@@ -88,7 +88,8 @@ let HTMLCard4 = `<h5 class="subtitle">"Hello World"<br><p class="letra2">there a
 let HTMLCard5 = `<h3 class="subtitle2">Analista en Sistemas</br>-</br>Desarrollador</h3>`
     setTimeout(() => {
         HTMLCard += `<p class="letra l1">${nombre}</p>`
-        $("#title").html(HTMLCard)
+        $("#title").html(HTMLCard);
+        document.getElementById("body").style.animation = "bodyAnimation 1.5s linear forwards"
         setTimeout(() => {
             HTMLCard = `<p class="l1">${nombre}</p>`
             HTMLCard2 += `<p class="letra l2">&nbsp;${segnombre}</p>`
@@ -108,8 +109,8 @@ let HTMLCard5 = `<h3 class="subtitle2">Analista en Sistemas</br>-</br>Desarrolla
                     },1000)
                 },1000)
             },700)
-        }, 700)  
-    }, 1700);
+        }, 800)  
+    }, 7500);
    
     
 let refExpCea = document.getElementById("refExpCea");

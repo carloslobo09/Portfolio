@@ -7,6 +7,7 @@
     <meta property="og:title" content="Portfolio - Carlos Lobo">
     <meta property="og:image" content="./image/image-head.jpg">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pacman.css">
     <link rel="icon" href="./image/icon.png">
     <link href="./fontawesome/css/all.css" rel="stylesheet">
     <script defer src="events.js"></script>
@@ -17,7 +18,22 @@
 
 <body id="body">
     <div class="loading show">
-        <div class="spin"></div>
+        <div id="soluciones" class="soluciones">
+            <p>Solutions</p>
+        </div>
+        <div id="pacman" class="pacman">
+
+        </div>
+        <div id="problems" class="problems">
+
+        </div>
+        <div class="group-min-problems">
+            <div class="min-problems1" style="--i:5; --k:1"></div>
+            <div class="min-problems2" style="--i:4; --k:2"></div>
+            <div class="min-problems3" style="--i:3; --k:3"></div>
+            <div class="min-problems4" style="--i:2; --k:4"></div>
+            <div class="min-problems5" style="--i:1; --k:5"></div>
+        </div>
     </div>
     <section class="modal" id="modal">
         <div class="modal_content">
@@ -26,23 +42,25 @@
                 <span class="close">&times;</span>
                 <button class="verDesktop" id="verDesktop">VER DESKTOP</button>
                 <h1>¿Quien soy?</h1>
-                <p>Soy oriundo de Coronel Juan Solá, un municipio de Rivadavia Banda Norte, vine a Salta 
-                    Capital en búsqueda de cumplir mi sueño, ser Desarrollador.</br> Desde adolescente siempre tuve 
-                    pasión por la Tecnología; computadoras, celulares, software en general, hasta llegando a 
+                <p>Soy oriundo de Coronel Juan Solá, un municipio de Rivadavia Banda Norte, vine a Salta
+                    Capital en búsqueda de cumplir mi sueño, ser Desarrollador.</br> Desde adolescente siempre tuve
+                    pasión por la Tecnología; computadoras, celulares, software en general, hasta llegando a
                     desarrollar
-                     pequeñas páginas web para un juego de ese entonces, o modificando archivos internos 
-                     creando Administradores para servidor in-game. 
-                </br>    Actualmente cuento con un título Terciario de Analista en Sistemas y Programador,
-                 y con el deseo de aumentar el prestigio, me encuentro en mitad de la carrera de Licenciado
-                  en Informática en la Universidad SIGLO XXI. También estoy capacitándome constantemente por 
-                  internet en plataformas como Udemy, Platzi y CoderHouse, de los cuales cuento que distintas
-                  certificaciones. Considero que no hay límites para especializarse, ya que a diferencia 
-                  de otros rubros, la tecnología Informática es un mundo que está en constante crecimiento.
-            </br> Mis aspiraciones a futuro son, trabajar para el exterior ya sea en remoto o con posibilidad 
-            de relocalización; y por qué no? En una empresa de alto prestigio como Globant o MercadoLibre, entre otras más.
+                    pequeñas páginas web para un juego de ese entonces, o modificando archivos internos
+                    creando Administradores para servidor in-game.
+                    </br> Actualmente cuento con un título Terciario de Analista en Sistemas y Programador,
+                    y con el deseo de aumentar el prestigio, me encuentro en mitad de la carrera de Licenciado
+                    en Informática en la Universidad SIGLO XXI. También estoy capacitándome constantemente por
+                    internet en plataformas como Udemy, Platzi y CoderHouse, de los cuales cuento que distintas
+                    certificaciones. Considero que no hay límites para especializarse, ya que a diferencia
+                    de otros rubros, la tecnología Informática es un mundo que está en constante crecimiento.
+                    </br> Mis aspiraciones a futuro son, trabajar para el exterior ya sea en remoto o con posibilidad
+                    de relocalización; y por qué no? En una empresa de alto prestigio como Globant o MercadoLibre, entre
+                    otras más.
                 </p>
             </div>
-            <button class="button-modal" id="button-modal" onclick="document.location='./docs/Moderno Profesional Currículum.pdf'">Descargar C.V.</button>
+            <button class="button-modal" id="button-modal"
+                onclick="document.location='./docs/Moderno Profesional Currículum.pdf'">Descargar C.V.</button>
         </div>
     </section>
     <div class="container" id="container">
@@ -244,7 +262,7 @@
                             <strong><a id="refExpFarm">¡Ver mas sobre el proyecto!</a></strong>
                         </p>
                     </div>
-                    
+
                     <div class="exp-card">
                         <h3 class="title-port">Secretario Administrativo Informático</h3>
                         <img class="img-exp" src="./image/Legislatura.jpg"></br>
@@ -281,7 +299,7 @@
                             <strong><a id="refExpCea">¡Ver mas sobre el proyecto!</a></strong>
                         </p>
                     </div>
-                    
+
                     <div class="exp-card">
                         <h3 class="title-port">Diseñador Grafico</h3>
                         <img class="img-exp" src="./image/corel.jpg"></br>
@@ -289,8 +307,10 @@
                         </br></br>
                         <div class="line"></div></br>
                         <p>
-                            Actualmente me encuentro trabajando para<strong><a href="https://www.instagram.com/el.oasis.gaona/"> El Oasis de Gaona </a></strong>
-                            , manejando las redes y el diseño de banners. Tambien trabajé para empresa orientada en diseñar
+                            Actualmente me encuentro trabajando para<strong><a
+                                    href="https://www.instagram.com/el.oasis.gaona/"> El Oasis de Gaona </a></strong>
+                            , manejando las redes y el diseño de banners. Tambien trabajé para empresa orientada en
+                            diseñar
                             prendas de deporte llamada JothtiDesign, a la cual le hice el logo, por un corto tiempo.
                             </br></br>
                             <strong>Para ver los proyectos</strong></br></br>
@@ -306,16 +326,20 @@
                 </button>
                 <div class="contact-content" id="contact-content">
                     <div class="icons-content">
-                        <a class="icon"><span data-detail="+54&nbsp;3878 628115"><i class="fa-brands fa-whatsapp-square fa-3x wpp-icon"></i></span></a>
+                        <a class="icon"><span data-detail="+54&nbsp;3878 628115"><i
+                                    class="fa-brands fa-whatsapp-square fa-3x wpp-icon"></i></span></a>
                     </div>
                     <div class="icons-content">
-                        <a class="icon"><span data-detail="charls_0997@hotmail.com"><i class="fa-solid fa-square-envelope fa-3x mail-icon"></i></span></a>
+                        <a class="icon"><span data-detail="charls_0997@hotmail.com"><i
+                                    class="fa-solid fa-square-envelope fa-3x mail-icon"></i></span></a>
                     </div>
                     <div class="icons-content">
-                        <a class="icon" href="https://github.com/carloslobo09"><i class="fa-brands fa-github fa-3x telegram-icon"></i></a>
+                        <a class="icon" href="https://github.com/carloslobo09"><i
+                                class="fa-brands fa-github fa-3x telegram-icon"></i></a>
                     </div>
                     <div class="icons-content">
-                        <a class="icon" href="https://www.linkedin.com/in/carlos-lobo-9082201b9"><i class="fa-brands fa-linkedin fa-3x linkedin-icon"></i></a>
+                        <a class="icon" href="https://www.linkedin.com/in/carlos-lobo-9082201b9"><i
+                                class="fa-brands fa-linkedin fa-3x linkedin-icon"></i></a>
                     </div>
                 </div>
             </div>
@@ -328,8 +352,9 @@
         <footer class="footer">
             <p class="content-footer">Developed and designed by Carlos Ignacio Lobo. ©2021. All rights reserved.</p>
             <div id="qrcode">
-                <img src="https://www.codigos-qr.com/qr/php/qr_img.php?d=https%3A%2F%2Fcarloslobo09.github.io%2FPortfolio%2F&s=6&e=m" alt="Generador de Códigos QR Codes"/>
-            </div> 
+                <img src="https://www.codigos-qr.com/qr/php/qr_img.php?d=https%3A%2F%2Fcarloslobo09.github.io%2FPortfolio%2F&s=6&e=m"
+                    alt="Generador de Códigos QR Codes" />
+            </div>
         </footer>
     </div>
 </body>

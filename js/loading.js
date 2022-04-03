@@ -1,4 +1,15 @@
-var Loading = (loadingDelayHidden) => {
+
+let soluciones = document.getElementById("soluciones")
+let pacman = document.getElementById("pacman")
+let problems = document.getElementById("problems")
+
+
+setTimeout(() => {
+    soluciones.style.animation = " letrasPacmanAnimacion 2s linear forwards"
+    pacman.style.animation = " pacmanAnimacion 5s linear forwards"
+    problems.style.animation = " animationProblems 2.5s linear forwards"
+}, 2000);
+let Loading = (loadingDelayHidden) => {
 
     //-----------------------------------------------------
     // Variables
@@ -30,7 +41,7 @@ var Loading = (loadingDelayHidden) => {
      */
     function hideLoading() {
         // Comprueba que exista el HTML
-        if(loading !== null) {
+        if (loading !== null) {
             // Oculta el HTML de "cargando..." quitando la clase .show
             // Borra el HTML
             setTimeout(function () {
@@ -52,7 +63,7 @@ var Loading = (loadingDelayHidden) => {
             lenImgs = imgs.length;
 
             /* Comprobar que todas las imágenes estén cargadas */
-            if(imgs.length === 0) {
+            if (imgs.length === 0) {
                 // No hay ninguna
                 hideLoading();
             } else {
@@ -71,4 +82,4 @@ var Loading = (loadingDelayHidden) => {
 }
 
 // Para usarlo se declara e inicia. El número es el tiempo transcurrido para borra el HTML una vez cargado todos los elementos, en este caso 1 segundo: 1000 milisegundos,
-Loading(1500).init();
+Loading(7500).init();
