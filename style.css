@@ -584,21 +584,26 @@ body {
 }
 
 .wpp-icon {
-    color: green;
-    background-color: whitesmoke;
+    color: white;
+    background-color: green;
     padding: 5px;
     border-radius: 4px;
 }
 
 .telegram-icon {
-    color: white;
-    background-color: rgb(40, 38, 44);
+    color: rgb(38, 118, 203);
+    background-color: white;
+    padding: 5px;
+    border-radius: 60%;
+}
+.github-icon {
+    color: rgb(25, 25, 25);
+    background-color: white;
     padding: 5px;
     border-radius: 4px;
 }
-
 .mail-icon {
-    color: rgb(0, 100, 208);
+    color: rgb(0, 50, 228);
     background-color: whitesmoke;
     padding: 5px;
     border-radius: 4px;
