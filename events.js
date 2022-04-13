@@ -67,11 +67,11 @@ document.querySelectorAll('.grid .contenido .port-content .content-order-in-card
     const ruta = elemento.getAttribute('src');
         elemento.addEventListener('click', ()=>{
             overlay.classList.add('activo');
-            if (ruta == "/image/JothtiDesign.jpg") {document.querySelector('#overlay img').src="/image/React-App.gif"}  
-            if (ruta == "/image/FarmaciaMorillo.jpg") {document.querySelector('#overlay img').src="/image/FARMACIA-HOSPITAL-MORILLO.gif"}  
-            if (ruta == "/image/CEA.jpg") {document.querySelector('#overlay img').src="/image/CEA.gif"}  
-            if (ruta == "/image/COVIDMorillo.jpg") {document.querySelector('#overlay img').src="/image/CDTM.gif"}  
-            if (ruta == "/image/SupOkami.jpg") {document.querySelector('#overlay img').src="/image/Sup Okami.gif"}    
+            if (ruta == "./image/JothtiDesign.jpg") {document.querySelector('#overlay img').src="./image/React-App.gif"; }  
+            if (ruta == "./image/FarmaciaMorillo.jpg") {document.querySelector('#overlay img').src="./image/FARMACIA-HOSPITAL-MORILLO.gif"}  
+            if (ruta == "./image/CEA.jpg") {document.querySelector('#overlay img').src="./image/CEA.gif"}  
+            if (ruta == "./image/COVIDMorillo.jpg") {document.querySelector('#overlay img').src="./image/CDTM.gif"}  
+            if (ruta == "./image/SupOkami.jpg") {document.querySelector('#overlay img').src="./image/Sup Okami.gif"}    
         });
     
 });
@@ -85,27 +85,33 @@ let HTMLCard = ""
 let HTMLCard2 = ""
 let HTMLCard3 = ""
 let HTMLCard4 = `<h5 class="subtitle">"Hello World"<br><p class="letra2">there are no limits to learning<p></h5>`
-let HTMLCard5 = `<h3 class="subtitle2">Tec.&nbsp;Analista en Sistemas</br>-</br>Desarrollador</h3>`
-
-    HTMLCard += `<p class="letra l1">${nombre}</p>`
-    $("#title").html(HTMLCard)
+let HTMLCard5 = `<h3 class="subtitle2">Analista en Sistemas</br>-</br>Desarrollador</h3>`
     setTimeout(() => {
-        HTMLCard = `<p class="l1">${nombre}</p>`
-        HTMLCard2 += `<p class="letra l2">&nbsp;${segnombre}</p>`
-        $("#title").html(HTMLCard+HTMLCard2)
-        setTimeout(() =>{
+        HTMLCard += `<p class="letra l1">${nombre}</p>`
+        $("#title").html(HTMLCard);
+        document.getElementById("body").style.animation = "bodyAnimation 1.5s linear forwards"
+        setTimeout(() => {
             HTMLCard = `<p class="l1">${nombre}</p>`
-            HTMLCard2 = `<p class="l2">&nbsp;${segnombre}</p>`
-            HTMLCard3 += `<p class="letra l3">&nbsp;${apellido}</p>`
-            $("#title").html(HTMLCard+HTMLCard2+HTMLCard3)
-            setTimeout(() => {
-                $("#subtitle").html(HTMLCard4)
+            HTMLCard2 += `<p class="letra l2">&nbsp;${segnombre}</p>`
+            $("#title").html(HTMLCard+HTMLCard2)
+            setTimeout(() =>{
+                HTMLCard = `<p class="l1">${nombre}</p>`
+                HTMLCard2 = `<p class="l2">&nbsp;${segnombre}</p>`
+                HTMLCard3 += `<p class="letra l3">&nbsp;${apellido}</p>`
+                $("#title").html(HTMLCard+HTMLCard2+HTMLCard3)
                 setTimeout(() => {
-                    $("#subtitle2").html(HTMLCard5)
+                    $("#subtitle").html(HTMLCard4)
+                    setTimeout(() => {
+                        $("#subtitle2").html(HTMLCard5)
+                        setTimeout(() => {
+                            document.getElementById("burbuja").style.display ="block"
+                        }, 1000);
+                    },1000)
                 },1000)
-            },1000)
-        },700)
-    }, 700)
+            },700)
+        }, 800)  
+    }, 7500);
+   
     
 let refExpCea = document.getElementById("refExpCea");
 let refExpFarm = document.getElementById("refExpFarm");
@@ -145,4 +151,50 @@ refExpFarm.addEventListener("click",function () {
             location.href = "#farm";
         },300)
     }
+})
+let burbujaP = document.getElementById("burbuja-p");
+burbujaP.textContent = "¡Más sobre mí!";
+document.querySelector("#burbuja").addEventListener("mouseover",function () {
+    burbujaP.textContent = "";
+    
+})
+burbuja.addEventListener("mouseout",function () {
+    burbujaP.textContent = "¡Más sobre mí!";
+})
+
+let modal = document.getElementById("modal");
+burbuja.addEventListener("click",function () {
+    modal.style.display = "flex";
+    document.getElementById("body").style.overflowY = "hidden"
+    document.getElementById("container").style.filter = "blur(4px)"
+})
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function () {
+    modal.style.display = "none";
+    document.getElementById("container").style.filter = ""
+    document.getElementById("body").style.overflowY = "auto"
+    document.getElementById("content_modal").style.zIndex="1"
+    document.getElementById("button-modal").style.display="block"
+    document.getElementById("volverDesktop").style.display="none"
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      document.getElementById("container").style.filter = ""
+      document.getElementById("body").style.overflowY = "auto"
+      document.getElementById("content_modal").style.zIndex="1"
+      document.getElementById("button-modal").style.display="block"
+      document.getElementById("volverDesktop").style.display="none"
+    }
+}
+let btnverDesktop = document.getElementById("verDesktop");
+btnverDesktop.addEventListener("click",function () {
+    document.getElementById("content_modal").style.zIndex="-1"
+    document.getElementById("button-modal").style.display="none"
+    document.getElementById("volverDesktop").style.display="block"
+    document.getElementById("volverDesktop").addEventListener("click",function () {
+        document.getElementById("content_modal").style.zIndex="1"
+        document.getElementById("button-modal").style.display="block"
+        document.getElementById("volverDesktop").style.display="none"
+    })      
 })

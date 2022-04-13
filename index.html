@@ -2,28 +2,79 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:image" content="../Portfolio/image/image-meta.jpg" />
+    <meta name="keywords"
+        content="curriculum, cv, developer, programador salta, programador, salta programador argentina, developer salta, paginas web, programador junior, junior" />
+    <meta name="author" content="Carlos Lobo" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pacman.css">
+    <link rel="icon" href="./image/icon.png">
     <link href="./fontawesome/css/all.css" rel="stylesheet">
-    <script defer src="js/loading.js"></script>
     <script defer src="events.js"></script>
-    <script defer src="js/particles.js"></script>
+    <script src="js/particles.js"></script>
     <script defer src="js/particulas.js"></script>
-    <title>Portafolio</title>
+    <title>Portafolio - Carlos Lobo</title>
 </head>
 
 <body id="body">
     <div class="loading show">
-        <div class="spin"></div>
+        <div id="soluciones" class="soluciones">
+            <p>Solutions</p>
+        </div>
+        <div id="pacman" class="pacman">
+
+        </div>
+        <div id="problems" class="problems">
+
+        </div>
+        <div class="group-min-problems">
+            <div class="min-problems1" style="--i:5; --k:1"></div>
+            <div class="min-problems2" style="--i:4; --k:2"></div>
+            <div class="min-problems3" style="--i:3; --k:3"></div>
+            <div class="min-problems4" style="--i:2; --k:4"></div>
+            <div class="min-problems5" style="--i:1; --k:5"></div>
+        </div>
     </div>
-    <div class="container">
+    <section class="modal" id="modal">
+        <div class="modal_content">
+            <button class="volverDesktop" id="volverDesktop">&nbsp;<i class="fa-solid fa-caret-left"></i>VOLVER</button>
+            <div class="content_modal" id="content_modal">
+                <span class="close">&times;</span>
+                <button class="verDesktop" id="verDesktop">VER DESKTOP</button>
+                <h1>¿Quien soy?</h1>
+                <p>Soy oriundo de Coronel Juan Solá, un municipio de Rivadavia Banda Norte, vine a Salta
+                    Capital en búsqueda de cumplir mi sueño, ser Desarrollador.</br> Desde adolescente siempre tuve
+                    pasión por la Tecnología; computadoras, celulares, software en general, hasta llegando a
+                    desarrollar
+                    pequeñas páginas web para un juego de ese entonces, o modificando archivos internos
+                    creando Administradores para servidor in-game.
+                    </br> Actualmente cuento con un título Terciario de Analista en Sistemas y Programador,
+                    y con el deseo de aumentar el prestigio, me encuentro en mitad de la carrera de Licenciado
+                    en Informática en la Universidad SIGLO XXI. También estoy capacitándome constantemente por
+                    internet en plataformas como Udemy, Platzi y CoderHouse, de los cuales cuento que distintas
+                    certificaciones. Considero que no hay límites para especializarse, ya que a diferencia
+                    de otros rubros, la tecnología Informática es un mundo que está en constante crecimiento.
+                    </br> Mis aspiraciones a futuro son, trabajar para el exterior ya sea en remoto o con posibilidad
+                    de relocalización; y por qué no? En una empresa de alto prestigio como Globant o MercadoLibre, entre
+                    otras más.
+                </p>
+            </div>
+            <button class="button-modal" id="button-modal"
+                onclick="document.location='./docs/Moderno Profesional Currículum.pdf'">Descargar C.V.</button>
+        </div>
+    </section>
+    <div class="container" id="container">
         <header class="header">
             <div id="particles-js"></div>
             <div class="grid2">
-                <h1 id="title" class="title"></h1>
+                <h1 id="title" class="title"></h1><br>
                 <div id="subtitle"></div>
                 <div id="subtitle2"></div>
+            </div>
+            <div id="burbuja" class="burbuja">
+                <p id="burbuja-p"></p>
             </div>
         </header>
         <main class="grid">
@@ -35,7 +86,7 @@
                     <div class="content-order-in-card">
                         <div class="card-port">
                             <h3 class="title-port">Jothti Design</h3>
-                            <img class="img-port" id="react-app" src="/image/JothtiDesign.jpg"></br>
+                            <img class="img-port" id="react-app" src="./image/JothtiDesign.jpg"></br>
                             <p><strong>Mi primer aplicación creada con la tecnología de React, a modo de
                                     proyecto final en el curso, impartido por CoderHouse</strong>
                                 Esta tienda se creo con el fin de comercializar prendas y otros accesorios
@@ -58,7 +109,7 @@
                     <div class="content-order-in-card">
                         <div class="card-port">
                             <h3 class="title-port" id="farm">Farmacia / Hospital Morillo</h3>
-                            <img class="img-port" src="/image/FarmaciaMorillo.jpg">
+                            <img class="img-port" src="./image/FarmaciaMorillo.jpg">
                             <p><strong>Aplicacion para Control de Stock. </strong> Este proyecto fue desarrollado con el
                                 fin de llevar
                                 un control exacto de insumos en farmacia del hospital de Morillo, instalado en un
@@ -72,14 +123,14 @@
                                 <span data-detail="CSS3"><i class="fa-brands fa-css3-alt fa-2x"></i></span>
                                 <span data-detail="Javascript"><i class="fa-brands fa-js fa-2x"></i></span>
                                 <span data-detail="Bootstrap"><i class="fa-brands fa-bootstrap fa-2x"></i></span>
-                                <span data-detail="MySQL"><img class="img-icon-p a" src="/image/mysql-icon.png"></span>
+                                <span data-detail="MySQL"><img class="img-icon-p a" src="./image/mysql-icon.png"></span>
                             </div></br></br>
                         </div>
                     </div>
                     <div class="content-order-in-card">
                         <div class="card-port">
                             <h3 class="title-port" id="cea">Instituto C.E.A.</h3>
-                            <img class="img-port" src="/image/CEA.jpg">
+                            <img class="img-port" src="./image/CEA.jpg">
                             <p><strong>Aplicacion para el Control de alumnos, profesores, cursos y aranceles.</strong>
                                 Aplicativo local orientado en el control exacto de profesores, cursos a impartir,
                                 alumnos y
@@ -87,10 +138,10 @@
                                 final,
                                 debia buscar una entidad a la que pudiera aplicar los conocimientos adquiridos de
                                 programacion,
-                                analisis y documentacion. Como primer proyecto desarrollado por completo, soy consiente
+                                analisis y documentacion. Como primer proyecto desarrollado por completo, soy consciente
                                 de
                                 que le faltan pulir muchas cosas. Originalmente el proyecto lo inicie con dos compañeros
-                                mas, por cuestiones que desconozco, a mitad del tiempo estimado de entrega del proyecto,
+                                más, por cuestiones que desconozco, a mitad del tiempo estimado de entrega del proyecto,
                                 tuve que continuar solo y recortar los objetivos primeramente planteados, a objetivos
                                 con
                                 los que pueda cumplir con la entrega final.</p>
@@ -101,14 +152,14 @@
                                 <span data-detail="CSS3"><i class="fa-brands fa-css3-alt fa-2x"></i></span>
                                 <span data-detail="Javascript"><i class="fa-brands fa-js fa-2x"></i></span>
                                 <span data-detail="Bootstrap"><i class="fa-brands fa-bootstrap fa-2x"></i></span>
-                                <span data-detail="MySQL"><img class="img-icon-p a" src="/image/mysql-icon.png"></span>
+                                <span data-detail="MySQL"><img class="img-icon-p a" src="./image/mysql-icon.png"></span>
                             </div></br></br>
                         </div>
                     </div>
                     <div class="content-order-in-card">
                         <div class="card-port">
-                            <h3 class="title-port">Control de transeuntes / Coronel Juan Solá</h3>
-                            <img class="img-port" src="/image/COVIDMorillo.jpg">
+                            <h3 class="title-port">Control de transeúntes / Coronel Juan Solá</h3>
+                            <img class="img-port" src="./image/COVIDMorillo.jpg">
                             <p><strong>Aplicacion para el Control de transito municipal.</strong>
                                 A modo de colaboracion, este proyecto fue desarrollado con el fin de llevar un control
                                 total del ingreso
@@ -122,14 +173,14 @@
                                 <span data-detail="CSS3"><i class="fa-brands fa-css3-alt fa-2x"></i></span>
                                 <span data-detail="Javascript"><i class="fa-brands fa-js fa-2x"></i></span>
                                 <span data-detail="Bootstrap"><i class="fa-brands fa-bootstrap fa-2x"></i></span>
-                                <span data-detail="MySQL"><img class="img-icon-p a" src="/image/mysql-icon.png"></span>
+                                <span data-detail="MySQL"><img class="img-icon-p a" src="./image/mysql-icon.png"></span>
                             </div></br></br>
                         </div>
                     </div>
                     <div class="content-order-in-card">
                         <div class="card-port">
                             <h3 class="title-port">Supermercado Ōkami</h3>
-                            <img class="img-port" src="/image/SupOkami.jpg">
+                            <img class="img-port" src="./image/SupOkami.jpg">
                             <p><strong>Ecommerce.</strong>
                                 Mi primer aplicación creada con JavaScript, Este eCommerce fue creado imaginando un
                                 supermercado
@@ -190,7 +241,7 @@
                     </div>
                     <div class="card-content">
                         <i class="fa-solid fa-spell-check fa-4x english-icon"></i>
-                        <P>English Technical</P>
+                        <P>Technical english</P>
                     </div>
                 </div>
             </div>
@@ -199,6 +250,20 @@
                     <h3 class="title-nav">EXPERIENCE</h3>
                 </button>
                 <div class="exp-content" id="exp-content">
+                    <div class="exp-card">
+                        <h3 class="title-port">Desarrollador</h3>
+                        <img class="img-exp" src="./image/farmacia.jpg"></br>
+                        <strong>Farmacia | Hospital Morillo | 2020</strong>
+                        </br></br>
+                        <div class="line"></div></br>
+                        <p>
+                            Desarrollando un aplicativo web, enfocado en el control exhaustivo de insumos farmaceuticos,
+                            automatizando calculos
+                            de insumos necesarios mensualmente de acuerdo al criterio profesional.
+                            </br></br>
+                            <strong><a id="refExpFarm">¡Ver mas sobre el proyecto!</a></strong>
+                        </p>
+                    </div>
 
                     <div class="exp-card">
                         <h3 class="title-port">Secretario Administrativo Informático</h3>
@@ -219,6 +284,7 @@
                             </br>Tareas varias.
                         </p>
                     </div>
+
                     <div class="exp-card">
                         <h3 class="title-port">Desarrollador</h3>
                         <img class="img-exp" src="./image/InstitutoCEA.jpg"></br>
@@ -233,20 +299,9 @@
                             de Tec. Analista en Sistemas
                             </br></br>
                             <strong><a id="refExpCea">¡Ver mas sobre el proyecto!</a></strong>
+                        </p>
                     </div>
-                    <div class="exp-card">
-                        <h3 class="title-port">Desarrollador</h3>
-                        <img class="img-exp" src="./image/farmacia.jpg"></br>
-                        <strong>Farmacia | Hospital Morillo | 2020</strong>
-                        </br></br>
-                        <div class="line"></div></br>
-                        <p>
-                            Desarrollando un aplicativo web, enfocado en el control exhaustivo de insumos farmaceuticos,
-                            automatizando calculos
-                            de insumos necesarios mensualmente de acuerdo al criterio profesional.
-                            </br></br>
-                            <strong><a id="refExpFarm">¡Ver mas sobre el proyecto!</a></strong>
-                    </div>
+
                     <div class="exp-card">
                         <h3 class="title-port">Diseñador Grafico</h3>
                         <img class="img-exp" src="./image/corel.jpg"></br>
@@ -254,8 +309,10 @@
                         </br></br>
                         <div class="line"></div></br>
                         <p>
-                            Actualmente me encuentro trabajando para<strong><a href="https://www.instagram.com/el.oasis.gaona/"> El Oasis de Gaona </a></strong>
-                            , manejando las redes y el diseño de banners. Tambien trabajé para empresa orientada en diseñar
+                            Actualmente me encuentro trabajando para<strong><a
+                                    href="https://www.instagram.com/el.oasis.gaona/"> El Oasis de Gaona </a></strong>
+                            , manejando las redes y el diseño de banners. Tambien trabajé para empresa orientada en
+                            diseñar
                             prendas de deporte llamada JothtiDesign, a la cual le hice el logo, por un corto tiempo.
                             </br></br>
                             <strong>Para ver los proyectos</strong></br></br>
@@ -271,16 +328,19 @@
                 </button>
                 <div class="contact-content" id="contact-content">
                     <div class="icons-content">
-                        <a class="icon"><span data-detail="+54&nbsp;3878 628115"><i class="fa-brands fa-whatsapp-square fa-3x wpp-icon"></i></span></a>
+                        <a href="https://api.WhatsApp.com/send?phone=+54 9 3878 62-8115" target="_blank" class="icon"><i class="fa-brands fa-whatsapp fa-3x wpp-icon"></i></a>
                     </div>
                     <div class="icons-content">
-                        <a class="icon"><span data-detail="charls_0997@hotmail.com"><i class="fa-solid fa-square-envelope fa-3x mail-icon"></i></span></a>
+                        <a href="https://t.me/IgnacioL0b0" target="_blank" class="icon"><i class="fa-brands fa-telegram fa-3x telegram-icon"></i></a>
                     </div>
                     <div class="icons-content">
-                        <a class="icon" href="https://github.com/carloslobo09"><i class="fa-brands fa-github fa-3x telegram-icon"></i></a>
+                        <a href="mailto:charls_0997@hotmail.com" target="_blank" class="icon"><i class="fa-solid fa-envelope fa-3x mail-icon"></i></a>
                     </div>
                     <div class="icons-content">
-                        <a class="icon" href="https://www.linkedin.com/in/carlos-lobo-9082201b9"><i class="fa-brands fa-linkedin fa-3x linkedin-icon"></i></a>
+                        <a class="icon" href="https://github.com/carloslobo09" target="_blank"><i class="fa-brands fa-github fa-3x github-icon"></i></a>
+                    </div>
+                    <div class="icons-content">
+                        <a class="icon" href="https://www.linkedin.com/in/carlos-lobo-9082201b9" target="_blank"><i class="fa-brands fa-linkedin fa-3x linkedin-icon"></i></a>
                     </div>
                 </div>
             </div>
@@ -292,8 +352,14 @@
         </main>
         <footer class="footer">
             <p class="content-footer">Developed and designed by Carlos Ignacio Lobo. ©2021. All rights reserved.</p>
+            <div id="qrcode">
+                <img src="https://www.codigos-qr.com/qr/php/qr_img.php?d=https%3A%2F%2Fcarloslobo09.github.io%2FPortfolio%2F&s=6&e=m"
+                    alt="Generador de Códigos QR Codes" />
+            </div>
         </footer>
     </div>
 </body>
-<script src="/js/jquery.js"></script>
+<script src="./js/jquery.js"></script>
+<script src="./js/loading.js"></script>
+
 </html>
