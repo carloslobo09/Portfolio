@@ -1,0 +1,15 @@
+const apiKey = 'Nc8lp3kFCGiCogWeNcsGalUne1VsCrOy';
+
+const peticion = fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}`);
+
+peticion
+    .then(resp => resp.json())
+    .then(({data}) => {
+        const {url} = data[0].images.original
+
+        const img = document.createElement('img');
+        img.src = url;
+        document.body.append(img)
+
+    })
+    .catch(console.warn)

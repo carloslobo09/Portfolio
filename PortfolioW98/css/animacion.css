@@ -1,0 +1,28 @@
+@keyframes logo-windows {
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes logo-windows-DEV {
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from {width: 0;}
+}
+
+@keyframes blink {
+    50%{border-color: transparent;}
+}

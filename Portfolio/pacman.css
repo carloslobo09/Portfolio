@@ -1,0 +1,439 @@
+.pacman {
+    position: absolute;
+    top: 50vh;
+    left: 0vw;
+    margin-top: -8.5vh;
+    margin-left: 0vw;
+    width: 7.5vw;
+    height: 14vh;
+    background-color: rgb(255, 225, 0);
+    border-radius: 60% 60%;
+    border: black solid 2px;
+    z-index: 1;
+}
+
+
+@keyframes pacmanAnimacion {
+    0% {
+        left: 0%;
+        clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+    }
+
+    5% {
+        clip-path: polygon(100% 0, 100% 20%, 50% 50%, 100% 80%, 100% 100%, 0 100%, 0 0);
+    }
+
+    10% {
+        clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+    }
+
+    15% {
+        clip-path: polygon(100% 0, 100% 20%, 50% 50%, 100% 80%, 100% 100%, 0 100%, 0 0);
+    }
+
+    20% {
+        clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+    }
+
+    25% {
+        clip-path: polygon(100% 0, 100% 20%, 50% 50%, 100% 80%, 100% 100%, 0 100%, 0 0);
+    }
+
+    30% {
+        clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+    }
+
+    35% {
+        clip-path: polygon(100% 0, 100% 20%, 50% 50%, 100% 80%, 100% 100%, 0 100%, 0 0);
+    }
+
+    40% {
+        clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+    }
+
+    45% {
+        clip-path: polygon(100% 0, 100% 20%, 50% 50%, 100% 80%, 100% 100%, 0 100%, 0 0);
+    }
+
+    50% {
+        left: 50%;
+        margin-left: -60px;
+        clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+    }
+
+    68% {
+        transform: scale(1);
+    }
+
+    70% {
+        clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+        background-color: rgb(255, 225, 0);
+        transform: scale(1.1);
+    }
+
+    73% {
+        transform: scale(1);
+
+    }
+
+    75% {}
+
+    80% {
+        clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+
+    }
+
+    85% {
+        transform: scale(1) rotate(0deg);
+
+    }
+
+    90% {}
+
+    100% {
+        left: 50%;
+        margin-left: -60px;
+        transform: scale(0) rotate(-560deg);
+        clip-path: polygon(0 0, 0 0, 50% 50%, 0 100%, 0 100%, 0 100%, 0 0);
+        background-color: blue;
+
+    }
+}
+
+
+.soluciones {
+    color: green;
+    font-family: monospace;
+    font-size: 1.5vw;
+    position: absolute;
+    z-index: 2;
+    top: 50vh;
+    left: 0.5vw;
+    margin-top: -16vh;
+    margin-left: 0px;
+    filter: drop-shadow(0 0 6px green);
+
+}
+
+@keyframes letrasPacmanAnimacion {
+    0% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.problems {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    margin-top: -3.5vh;
+    margin-left: -2vw;
+    width: 3.2vw;
+    height: 5.7vh;
+    background-color: #171ef5;
+    filter: drop-shadow(0 0 6px #171ef5);
+    border-radius: 60% 60%;
+}
+
+@keyframes animationProblems {
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.problems::before {
+    content: "App";
+    color: green;
+    filter: drop-shadow(0 0 6px green);
+    position: absolute;
+    top: -90%;
+    left: 5%;
+    font-family: monospace;
+    font-size: 1.5vw;
+}
+
+.min-problems1,
+.min-problems2,
+.min-problems3,
+.min-problems4,
+.min-problems5 {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    margin-top: -2.5vh;
+    width: 2vw;
+    height: 4vh;
+    background-color: #41c1f8;
+    border-radius: 60% 60%;
+    filter: drop-shadow(0 0 6px #41c1f8);
+}
+
+.min-problems1::before,
+.min-problems2::before,
+.min-problems3::before,
+.min-problems4::before,
+.min-problems5::before {
+    content: "Problem";
+    color: whitesmoke;
+    position: absolute;
+    top: -90%;
+    left: -50%;
+    font-size: 1vw;
+    font-family: monospace;
+}
+
+.group-min-problems div {
+    animation: groupProblems 2.11s ease-in forwards;
+    animation-delay: calc(0.42s * var(--i));
+    margin-left: calc(-7.5vw * var(--k));
+}
+
+@keyframes groupProblems {
+    98% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* MEDIAQUERIS */
+
+
+@media(max-width:700px) {
+    .pacman {
+        height: 7vh;
+    }
+
+    .min-problems1,
+    .min-problems2,
+    .min-problems3,
+    .min-problems4,
+    .min-problems5 {
+        top: 47vh;
+        left: 42vw;
+        height: 2vh;
+    }
+
+    .problems {
+        top: 47.5vh;
+        left: 43vw;
+        height: 3vh;
+    }
+
+    .soluciones {
+        top: 53vh;
+    }
+
+    .group-min-problems div {
+        animation: groupProblems 2.11s ease-in forwards;
+        animation-delay: calc(0.40s * var(--i));
+        margin-left: calc(-6vw * var(--k));
+    }
+
+    @keyframes pacmanAnimacion {
+        0% {
+            left: 0%;
+            clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+        }
+
+        5% {
+            clip-path: polygon(100% 0, 100% 20%, 50% 50%, 100% 80%, 100% 100%, 0 100%, 0 0);
+        }
+
+        10% {
+            clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+        }
+
+        15% {
+            clip-path: polygon(100% 0, 100% 20%, 50% 50%, 100% 80%, 100% 100%, 0 100%, 0 0);
+        }
+
+        20% {
+            clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+        }
+
+        25% {
+            clip-path: polygon(100% 0, 100% 20%, 50% 50%, 100% 80%, 100% 100%, 0 100%, 0 0);
+        }
+
+        30% {
+            clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+        }
+
+        35% {
+            clip-path: polygon(100% 0, 100% 20%, 50% 50%, 100% 80%, 100% 100%, 0 100%, 0 0);
+        }
+
+        40% {
+            clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+        }
+
+        45% {
+            clip-path: polygon(100% 0, 100% 20%, 50% 50%, 100% 80%, 100% 100%, 0 100%, 0 0);
+        }
+
+        50% {
+            left: 50%;
+            margin-left: -60px;
+            clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+        }
+
+        68% {
+            transform: scale(1);
+        }
+
+        70% {
+            clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+            background-color: rgb(255, 225, 0);
+            transform: scale(1.1);
+        }
+
+        73% {
+            transform: scale(1);
+        }
+
+        80% {
+            clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+        }
+
+        85% {
+            transform: scale(1) rotate(0deg);
+        }
+
+        100% {
+            left: 50%;
+            margin-left: -60px;
+            transform: scale(0) rotate(-560deg);
+            clip-path: polygon(0 0, 0 0, 50% 50%, 0 100%, 0 100%, 0 100%, 0 0);
+            background-color: blue;
+        }
+    }
+}
+
+@media(max-width:500px) {
+    .pacman {
+        height: 4.5vh;
+    }
+
+    .min-problems1,
+    .min-problems2,
+    .min-problems3,
+    .min-problems4,
+    .min-problems5 {
+        top: 46vh;
+        left: 47.5vw;
+        height: 1.5vh;
+    }
+
+    .problems {
+        top: 46.6vh;
+        left: 50vw;
+        height: 2vh;
+        width: 3vw;
+    }
+
+    .soluciones {
+        top: 55vh;
+    }
+
+    .group-min-problems div {
+        animation: groupProblems 2.11s ease-in forwards;
+        animation-delay: calc(0.40s * var(--i));
+        margin-left: calc(-7vw * var(--k));
+    }
+
+    @keyframes pacmanAnimacion {
+        0% {
+            left: 0%;
+            clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+        }
+
+        5% {
+            clip-path: polygon(100% 0, 100% 20%, 50% 50%, 100% 80%, 100% 100%, 0 100%, 0 0);
+        }
+
+        10% {
+            clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+        }
+
+        15% {
+            clip-path: polygon(100% 0, 100% 20%, 50% 50%, 100% 80%, 100% 100%, 0 100%, 0 0);
+        }
+
+        20% {
+            clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+        }
+
+        25% {
+            clip-path: polygon(100% 0, 100% 20%, 50% 50%, 100% 80%, 100% 100%, 0 100%, 0 0);
+        }
+
+        30% {
+            clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+        }
+
+        35% {
+            clip-path: polygon(100% 0, 100% 20%, 50% 50%, 100% 80%, 100% 100%, 0 100%, 0 0);
+        }
+
+        40% {
+            clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+        }
+
+        45% {
+            clip-path: polygon(100% 0, 100% 20%, 50% 50%, 100% 80%, 100% 100%, 0 100%, 0 0);
+        }
+
+        50% {
+            left: 50%;
+            margin-left: -20px;
+            clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+        }
+
+        68% {
+            transform: scale(1);
+        }
+
+        70% {
+            clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+            background-color: rgb(255, 225, 0);
+            transform: scale(1.1);
+        }
+
+        73% {
+            transform: scale(1);
+        }
+
+        80% {
+            clip-path: polygon(100% 0, 100% 50%, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
+        }
+
+        85% {
+            transform: scale(1) rotate(0deg);
+        }
+
+        100% {
+            left: 50%;
+            margin-left: -20px;
+            transform: scale(0) rotate(-560deg);
+            clip-path: polygon(0 0, 0 0, 50% 50%, 0 100%, 0 100%, 0 100%, 0 0);
+            background-color: blue;
+        }
+    }
+}
